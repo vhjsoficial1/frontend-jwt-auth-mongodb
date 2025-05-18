@@ -1,0 +1,93 @@
+// Botões base
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+
+  // Estados
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+  }
+
+  // Tamanhos
+  &--sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  &--md {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  &--lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  // Variantes
+  &--primary {
+    background-color: var(--primary);
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: var(--primary-dark);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+    border: 1px solid var(--gray-200);
+
+    &:hover:not(:disabled) {
+      background-color: var(--gray-200);
+    }
+  }
+
+  &--danger {
+    background-color: var(--danger);
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: var(--danger-dark);
+    }
+  }
+
+  &--text {
+    background: transparent;
+    color: var(--primary);
+    padding: 0.25rem 0.5rem;
+
+    &:hover:not(:disabled) {
+      text-decoration: underline;
+      background-color: var(--gray-100);
+    }
+  }
+}
+
+// Grupo de botões
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+}

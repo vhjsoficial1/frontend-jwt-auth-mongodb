@@ -1,0 +1,71 @@
+.form-group {
+  margin-bottom: 1.5rem;
+
+  &__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--gray-700);
+  }
+
+  &__control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: white;
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    }
+
+    &--error {
+      border-color: var(--danger);
+    }
+  }
+
+  &__error {
+    color: var(--danger);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+  }
+
+  &__help {
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+  }
+}
+
+// Formulários horizontais
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  .form-group {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+// Checkboxes e Radios
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  &__input {
+    margin-right: 0.5rem;
+  }
+
+  &__label {
+    margin-bottom: 0;
+  }
+}
